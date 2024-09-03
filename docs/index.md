@@ -1,17 +1,5 @@
-# Calrissian
+## Welcome to the Calrissian Documentation Site!
 
-CWL on Kubernetes
+Calrissian is a cloud-native CWL runner designed for executing Common Workflow Language (CWL) workflows in containerized environments, particularly on Kubernetes. Whether you're working on bioinformatics, data science, or any domain requiring reproducible workflows, Calrissian provides the tools you need to scale and manage your workflows efficiently.
 
-## Overview
-
-Calrissian is a [CWL](https://www.commonwl.org) implementation designed to run inside a Kubernetes cluster. Its goal is to be highly efficient and scalable, taking advantage of high capacity clusters to run many steps in parallel.
-
-## Cluster Requirements
-
-Calrissian requires a [Kubernetes](https://kubernetes.io) cluster, configured to provision [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) with the [ReadWriteMany](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) access mode. 
-
-## Scalability / Resource Requirements
-
-Calrissian is designed to issue tasks in parallel if they are independent, and thanks to Kubernetes, should be able to run very large parallel workloads.
-
-When running `calrissian`, you must provide a limit the the number of CPU cores (`--max-cores`) and RAM megabytes (`--max-ram`) to use concurrently. Calrissian will use CWL [ResourceRequirements](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement) to track usage and stay within the limits provided. We highly recommend using accurate ResourceRequirements in your workloads, so that they can be scheduled efficiently and are less likely to be terminated or refused by the cluster.
+Here, you'll find guides, tutorials, and reference materials to help you get started with Calrissian, configure your workflows, and optimize their performance in Kubernetes clusters. Whether you're new to CWL or an experienced user, our documentation will support you at every step of your journey with Calrissian.

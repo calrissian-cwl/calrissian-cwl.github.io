@@ -1,25 +1,86 @@
-## Creating Namespace and Roles
+## Kubernetes cluster configuration
+
+## Service account
+
+It's a best practice to create a dedicated Service Account with a manifest like:
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: calrissian-sa
+```
+
+## Roles and Role Bindings
 
 `calrissian` executes CWL workflows by running steps as Pods in a kubernetes cluster. 
 
-To support this requirement, we create a role with the necessary privileges and bind it to a service account.
+Create the Roles to manage pods and pod logs:
 
-### Create the Namespace
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pod-manager-role
+rules:
+- apiGroups: [""] 
+  resources: ["pods"]
+  verbs: ["create","patch","delete","list","watch","get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: log-reader-role
+rules:
+- apiGroups: [""] 
+  resources: ["pods/log"]
+  verbs: ["get","list"]
+```
 
-```
-NAMESPACE_NAME=calrissian-demo-project
-kubectl create namespace "$NAMESPACE_NAME"
+Bind these roles to the `calrissian-sa` Service Account with the manifest: 
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pod-manager-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pod-manager-role
+subjects:
+- kind: ServiceAccount
+  name: calrissian-sa
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: log-reader-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: log-reader-role
+subjects:
+- kind: ServiceAccount
+  name: calrissian-sa
 ```
 
-### Create the Roles and RoleBindings
+## Persistent Volume Claim
 
+Calrissian needs a ReadWriteMany volume than can be defined with:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: calrissian-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10G
+  storageClassName: default
 ```
-kubectl --namespace="$NAMESPACE_NAME" create role pod-manager-role \
-  --verb=create,patch,delete,list,watch --resource=pods
-kubectl --namespace="$NAMESPACE_NAME" create role log-reader-role \
-  --verb=get,list --resource=pods/log
-kubectl --namespace="$NAMESPACE_NAME" create rolebinding pod-manager-default-binding \
-  --role=pod-manager-role --serviceaccount=${NAMESPACE_NAME}:default
-kubectl --namespace="$NAMESPACE_NAME" create rolebinding log-reader-default-binding \
-  --role=log-reader-role --serviceaccount=${NAMESPACE_NAME}:default
-```
+
+Note: Update the `storageClassName` according to the Kubernetes cluster.

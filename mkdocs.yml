@@ -1,4 +1,4 @@
-site_name: Calrissian
+site_name: Calrissian - CWL on Kubernetes
 site_description: 'CWL runner for Kubernetes'
 site_url: 'https://calrissian-cwl.github.io'
 site_author: 'Fabrice Brito'
@@ -95,8 +95,18 @@ plugins:
 
 nav:
 - Introduction: 'index.md'
-- Installation: 'installation.md'
-- Cluster Configuration: 'cluster-configuration.md'
+- Installation and Configuration:
+  - Installation: 'installation.md'
+  - Cluster Configuration: 'cluster-configuration.md'
+- Background: 'background.md'
+- How it works: 'how-it-works.md'
+- Tutorial: 'tutorial.md'
+- How-to:
+  - Save the tool logs: 'how-to/save-tool-logs.md'
+  - Set pod labels: 'how-to/set-pod-labels.md'
+  - Set node selectors: 'how-to/set-node-selectors.md'
+- Reference: 
+  - Command-line tool: 'reference/cli.md'
 - Conformance:
   - 1.0.2: 'conformance/1.0.2.md'
   - 1.1.0: 'conformance/1.1.0.md'

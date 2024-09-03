@@ -2,9 +2,9 @@
 
 Calrissian is available at: [https://pypi.org/project/calrissian/](https://pypi.org/project/calrissian/)
 
-Install it with:
+Install it in your own container images with:
 
 ```
-pip install calrissian
+RUN pip install calrissian
 ```
 
