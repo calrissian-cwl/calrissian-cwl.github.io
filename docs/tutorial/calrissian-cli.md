@@ -6,6 +6,17 @@ This requires creating a pod with the `calrissian` executable installed and open
 
 This tutorial targets a minikube cluster.
 
+### Configure minikube
+
+Configure minikube to run calrissian:
+
+```
+curl -L https://calrissian-cwl.github.io/tutorial/assets/pvc.yaml | kubectl apply -n calrissian -f -
+curl -L https://calrissian-cwl.github.io/tutorial/assets/service-account.yaml | kubectl apply -n calrissian -f -
+curl -L https://calrissian-cwl.github.io/tutorial/assets/roles.yaml | kubectl apply -n calrissian -f -
+curl -L https://calrissian-cwl.github.io/tutorial/assets/role-binding.yaml | kubectl apply -n calrissian -f -
+```
+
 ### Step 1: Create a Container with calrissian
 
 Below an example of a Dockerfile that suits the tutorial needs:
@@ -104,3 +115,8 @@ spec:
             claimName: calrissian-claim
 ```
 
+Deploy it with:
+
+```
+curl -L https://calrissian-cwl.github.io/tutorial/assets/deployment.yaml | kubectl apply -n calrissian -f -
+```
