@@ -1,5 +1,7 @@
 ## Kubernetes cluster configuration
 
+This page provides the configuration steps to run Calrissian jobs.
+
 ## Service account
 
 It's a best practice to create a dedicated Service Account with a manifest like:

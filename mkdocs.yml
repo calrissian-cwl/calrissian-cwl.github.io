@@ -5,7 +5,7 @@ site_author: 'Fabrice Brito'
 # Repository
 
 repo_name: 'Duke-GCB/calrissian'
-repo_url: 'https://github.com/calrissian-cwl/calrissian-cwl.github.io.git'
+repo_url: 'https://github.com/Duke-GCB/calrissian.git'
 edit_uri: 'docs/'
 
 
@@ -100,7 +100,9 @@ nav:
   - Cluster Configuration: 'cluster-configuration.md'
 - Background: 'background.md'
 - How it works: 'how-it-works.md'
-- Tutorial: 'tutorial.md'
+- Tutorial: 
+  - Calrissian Job: 'tutorial/k8s-job.md'
+  - Calrissian Cli: 'tutorial/calrissian-cli.md'
 - How-to:
   - Save the tool logs: 'how-to/save-tool-logs.md'
   - Set pod labels: 'how-to/set-pod-labels.md'
