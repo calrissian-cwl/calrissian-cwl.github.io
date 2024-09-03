@@ -5,11 +5,23 @@
          <lastmod>2024-09-03</lastmod>
     </url>
     <url>
+         <loc>https://calrissian-cwl.github.io/background/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
          <loc>https://calrissian-cwl.github.io/cluster-configuration/</loc>
          <lastmod>2024-09-03</lastmod>
     </url>
     <url>
+         <loc>https://calrissian-cwl.github.io/how-it-works/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
          <loc>https://calrissian-cwl.github.io/installation/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://calrissian-cwl.github.io/tutorial/</loc>
          <lastmod>2024-09-03</lastmod>
     </url>
     <url>
@@ -26,6 +38,10 @@
     </url>
     <url>
          <loc>https://calrissian-cwl.github.io/conformance/1.2.1/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://calrissian-cwl.github.io/reference/cli/</loc>
          <lastmod>2024-09-03</lastmod>
     </url>
 </urlset>
