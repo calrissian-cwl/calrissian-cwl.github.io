@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Calrissian-cwl"
+dynamic = ["version"]
+description = 'CWL on kubernetes with Calrissian - Documentation'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Fabrice Brito", email = "fabrice.brito@terradue.com" },
+]
+classifiers = []
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/calrissian-cwl/calrissian-cwl.github.io.git#readme"
+Issues = "https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/issues"
+Source = "https://github.com/calrissian-cwl/calrissian-cwl.github.io.git"
+
+[tool.hatch.version]
+path = "./__about__.py"
+
+[tool.hatch.envs.docs]
+
+dependencies = [
+  "pdocs",
+  "mkdocs-material",
+  "mkdocs-jupyter",
+  "mkdocs-minify-plugin"
+]
+
+[tool.hatch.envs.docs.scripts]
+serve = "mkdocs serve"
+deploy = "mkdocs gh-deploy --force"
