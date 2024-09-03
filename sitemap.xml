@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/cluster-configuration/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/installation/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/conformance/1.0.2/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/conformance/1.1.0/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/conformance/1.2.0/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/calrissian-cwl/calrissian-cwl.github.io.git/conformance/1.2.1/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+</urlset>
