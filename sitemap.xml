@@ -21,10 +21,6 @@
          <lastmod>2024-09-03</lastmod>
     </url>
     <url>
-         <loc>https://calrissian-cwl.github.io/tutorial/</loc>
-         <lastmod>2024-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://calrissian-cwl.github.io/conformance/1.0.2/</loc>
          <lastmod>2024-09-03</lastmod>
     </url>
@@ -54,6 +50,14 @@
     </url>
     <url>
          <loc>https://calrissian-cwl.github.io/reference/cli/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://calrissian-cwl.github.io/tutorial/calrissian-cli/</loc>
+         <lastmod>2024-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://calrissian-cwl.github.io/tutorial/k8s-job/</loc>
          <lastmod>2024-09-03</lastmod>
     </url>
 </urlset>
