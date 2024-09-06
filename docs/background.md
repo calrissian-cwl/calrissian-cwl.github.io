@@ -2,7 +2,7 @@
 
 Calrissian is a CWL implementation designed to run inside a Kubernetes cluster. Its goal is to be highly efficient and scalable, taking advantage of high capacity clusters to run many steps in parallel.
 
-It leverages cwltool to manage the execution of CWL workflows and triggers pods instead of containers. Here's a brief history of the Calrissian CWL runner:
+It leverages `cwltool` to manage the execution of CWL workflows and triggers pods instead of containers. Here's a brief history of the Calrissian CWL runner:
 
 ## History and Development of Calrissian CWL Runner
 
@@ -42,6 +42,8 @@ Calrissian is open-source, and its development has been community-driven, with c
 * Active Development: As of now, Calrissian continues to be actively developed and maintained. It is widely used in the scientific community, particularly for workflows that require cloud-native execution.
 * Growing Ecosystem: The ecosystem around CWL, including Calrissian, continues to grow, with more tools and integrations being developed to make workflow execution more seamless and efficient.
 
-## Conclusion
+## Calrissian role
 
-Calrissian CWL runner is a key tool for running CWL workflows in containerized environments like Kubernetes. Its development was driven by the need for a scalable, cloud-native solution for CWL workflows, and it has since become an essential tool in the CWL ecosystem. The ongoing contributions from the open-source community ensure that Calrissian remains a cutting-edge solution for managing CWL workflows in modern computational environments.
+Calrissian CWL runner is a key tool for running CWL workflows in containerized environments like Kubernetes. Its development was driven by the need for a scalable, cloud-native solution for CWL workflows, and it has since become an essential tool in the CWL ecosystem.
+
+The ongoing contributions from the open-source community ensure that Calrissian remains a cutting-edge solution for managing CWL workflows in modern computational environments.

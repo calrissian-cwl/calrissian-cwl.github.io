@@ -144,6 +144,10 @@ kubectl get pods -n calrissian -l job-name=water-bodies-detection -w
 
 This command watches the Pods in real-time, displaying their status as they move through the lifecycle stages of Pending, Running, and Completed.
 
-### Conclusion
+### Take-away
 
-By following these steps, you have successfully set up and run a Calrissian job on Kubernetes. The workflow processes Sentinel-2 imagery to detect water bodies within the specified area of interest. The outputs and logs are stored in the configured volumes, and the resource usage report provides detailed insights into the execution.
+By following these steps, you have successfully set up and run a Calrissian job on Kubernetes. 
+
+The workflow processes Sentinel-2 imagery to detect water bodies within the specified area of interest. 
+
+The outputs and logs are stored in the configured volumes, and the resource usage report provides detailed insights into the execution.
