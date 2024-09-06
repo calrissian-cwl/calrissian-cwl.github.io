@@ -23,7 +23,7 @@ The `--tmp-outdir-prefix` option allows you to specify a custom prefix for these
 
 `--outdir` specifies the output directory for final results.
 
-When cwltool completes the execution of a workflow or tool, the final output files are stored in a designated directory. 
+When `calrissian` completes the execution of a workflow or tool, the final output files are stored in a designated directory. 
 
 The `--outdir` option allows you to define the location of this output directory in the ReadWriteMany volume.
 

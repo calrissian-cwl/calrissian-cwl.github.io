@@ -102,7 +102,7 @@ nav:
 - How it works: 'how-it-works.md'
 - Tutorial: 
   - Calrissian Job: 'tutorial/k8s-job.md'
-  - Calrissian Cli: 'tutorial/calrissian-cli.md'
+  #- Calrissian Cli: 'tutorial/calrissian-cli.md'
 - How-to:
   - Save the tool logs: 'how-to/save-tool-logs.md'
   - Set pod labels: 'how-to/set-pod-labels.md'

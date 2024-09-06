@@ -17,7 +17,7 @@ spec:
       serviceAccountName: calrissian-sa
       containers:
         - name: calrissian-session
-          image: docker.io/library/calrissian-runtime 
+          image: docker.io/library/calrissian-run:latest
           command: ["sleep", "infinity"]
           volumeMounts:
             - mountPath: /calrissian
