@@ -4,9 +4,10 @@ site_url: 'https://calrissian-cwl.github.io'
 site_author: 'Fabrice Brito'
 # Repository
 
-repo_name: 'Duke-GCB/calrissian'
-repo_url: 'https://github.com/Duke-GCB/calrissian.git'
+repo_name: 'calrissian-cwl.github.io ' 
+repo_url: 'https://github.com/calrissian-cwl/calrissian-cwl.github.io'
 edit_uri: 'docs/'
+# set elsewhere the reference to the initial Duke University project repo (Duke-GCB/calrissian / https://github.com/Duke-GCB/calrissian.git)
 
 
 theme:
