@@ -19,7 +19,9 @@ It is highly recommended using accurate ResourceRequirements in the workloads, s
 
 ### CPU
 
-The `--max-cores` option sets the maximum number of CPU cores that Calrissian can use during the execution of a workflow. This value is specified as an integer, representing the total number of CPU cores allocated across all the Pods managed by Calrissian.
+The `--max-cores` option represents the total number of CPU cores allocated across all the Pods managed by Calrissian. 
+The value is specified as an integer. 
+It sets the maximum number of CPU cores that Calrissian can use for the execution of concurrent workflows on that pool of resources.
 
 How it works:
 
@@ -31,7 +33,9 @@ This option is crucial for managing CPU resources effectively within a Kubernete
 
 ### Memory
 
-The `--max-ram` option sets the maximum amount of RAM that Calrissian can use during the execution of a workflow. This value can be specified in bytes (e.g., 1048576), mebibytes (e.g., 512Mi), or gigabytes (e.g., 2G), following Kubernetes (k8s) resource conventions.
+The `--max-ram` option represents the total RAM allocated across all the Pods managed by Calrissian. 
+The value  is specified in bytes (e.g., 1048576), mebibytes (e.g., 512Mi), or gigabytes (e.g., 2G), following Kubernetes (k8s) resource conventions.
+It sets the maximum amount of RAM that Calrissian can use for the execution of concurrent workflows on that pool of resources.
 
 How it works:
 
@@ -39,11 +43,13 @@ How it works:
 * Pods are created and scheduled to run on the cluster as long as the cumulative RAM usage remains below the specified `--max-ram` limit.
 * If launching a new Pod would exceed this limit, the Pod remains in a pending state until sufficient resources are freed by the completion or termination of other Pods.
 
-This mechanism ensures that the workflow adheres to the specified memory constraints, preventing over-allocation of resources that could lead to performance degradation or failures in a Kubernetes environment.
+This mechanism ensures that a workflow adheres to the specified memory constraints, preventing over-allocation of resources that could lead to performance degradation or failures in a Kubernetes environment.
 
 ### GPU
 
-The `--max-gpus` option sets the maximum number of GPU cores that Calrissian can utilize during the execution of a workflow. This value is specified as an integer, representing the total number of GPU nodes available for allocation across all Pods managed by Calrissian.
+The `--max-gpus` option represents the total number of GPU cores available for allocation across all Pods managed by Calrissian.
+The value is specified as an integer.
+It sets the maximum number of GPU cores that Calrissian can use for the execution of concurrent workflows on that pool of resources.
 
 How it works:
 
