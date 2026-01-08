@@ -14,7 +14,12 @@ authors = [
   { name = "Fabrice Brito", email = "fabrice.brito@terradue.com" },
 ]
 classifiers = []
-dependencies = []
+dependencies = [
+  "pdocs",
+  "mkdocs-material",
+  "mkdocs-jupyter",
+  "mkdocs-minify-plugin"
+]
 
 [project.urls]
 Documentation = "https://github.com/calrissian-cwl/calrissian-cwl.github.io.git#readme"
@@ -34,5 +39,5 @@ dependencies = [
 ]
 
 [tool.hatch.envs.docs.scripts]
-serve = "mkdocs serve"
+serve = "mkdocs serve --dev-addr localhost:8088"
 deploy = "mkdocs gh-deploy --force"

@@ -104,3 +104,27 @@ This option defines the directory where the tool's log files will be stored. It 
 `--conf` allows the user to define the default values for the CLI arguments.
 
 This option can be used multiple times to override or set default values for the various command-line options, simplifying repeated use cases.
+
+### --no-network-access-pod-label
+
+`--no-network-access-pod-label` YAML file to set the pod label to use for disabling network access
+   
+### --network-access-pod-label
+
+`--network-access-pod-label` YAML file to set the pod label to use for enabling network access
+    
+### --dask-gateway-url
+
+`--dask-gateway-url`: defines the Dask Gateway URL
+
+### --dask-script-configmap 
+
+`--dask-script-configmap`: name of the already existing configmap with custom script for dask
+
+### --pod-priority-class
+
+`--pod-priority-class` priority Class Name assigned to the pod
+   
+### --env-from-secret
+
+`--env-from-secret`: secret name to set the pod environment

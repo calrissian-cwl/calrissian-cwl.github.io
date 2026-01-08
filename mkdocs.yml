@@ -100,6 +100,9 @@ nav:
   - Cluster Configuration: 'cluster-configuration.md'
 - Background: 'background.md'
 - How it works: 'how-it-works.md'
+- Pod environment: 'pod-environment.md'
+- Pod security context: 'pod-security-context.md'
+- Pod priority class: 'pod-priority-class.md'
 - Tutorial: 
   - Calrissian Job: 'tutorial/k8s-job.md'
   #- Calrissian Cli: 'tutorial/calrissian-cli.md'
@@ -114,3 +117,5 @@ nav:
   - 1.1.0: 'conformance/1.1.0.md'
   - 1.2.0: 'conformance/1.2.0.md'
   - 1.2.1: 'conformance/1.2.1.md'
+- Experimental:
+  - Dask Gateway: 'experimental/dask-gateway.md'
